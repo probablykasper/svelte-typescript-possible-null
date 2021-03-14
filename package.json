@@ -12,8 +12,6 @@
     "@types/snowpack-env": "^2.3.3",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "pug": "^3.0.2",
-    "sass": "^1.32.8",
     "snowpack": "^3.0.13",
     "svelte": "^3.35.0",
     "svelte-check": "^1.2.5",
