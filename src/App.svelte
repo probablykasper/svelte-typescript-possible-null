@@ -1,11 +1,18 @@
 <script lang="ts">
-  import { onMount } from 'svelte'
-  import Counter from './Counter.svelte'
-
-  let count: number = 0
-  onMount(() => {
-    const interval = setInterval(() => count++, 1000)
-    return () => clearInterval(interval)
-  })
+  type User =  { name: any } | null
+  let user: User = {
+    name: new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('probablykasper')
+      }, 1000)
+    })
+  }
 </script>
 
+{#if user}
+  {#await user.name}
+    Loading username
+  {:then name}
+    Username: {name}
+  {/await}
+{/if}
